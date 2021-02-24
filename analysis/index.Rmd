@@ -7,5 +7,7 @@ output:
 editor_options:
   chunk_output_type: console
 ---
-This is my R class Assignment Page 
-go to the Tasks [Here!]("docs/AssignmentMH.html")
+This is my R class Page
+
+
+To View the Assignment go [Here!]("docs/AssignmentMH.html")
