@@ -1,0 +1,247 @@
+---
+title: "Assignment - R course 15-19 February 2021"
+author: "Malte Hermes"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+          toc: TRUE
+          theme: united
+  
+---
+
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(openintro)
+library(broom)
+library(openintro)
+library(DT)
+library(xtable)
+options(xtable.floating = FALSE)
+options(xtable.timestamp = "")
+
+```
+
+
+
+
+
+
+#Based on the exercises from Rajbir:
+
+##1. Use the hfi dataset from the openintro package
+
+Data from the Human Freedom Index of 2016 was used:
+
+```{r, echo = FALSE}
+
+hfi_2016 <-  hfi %>% filter(year == 2016) #Human Freedom Index of 2016
+
+hfi_2016 %>%
+  DT::datatable(extensions = 'Buttons',
+                options = list(dom = 'lfrtiBp',
+                              buttons = c( 'csv', 'pdf', 'print'),
+                              lengthMenu =c(5,8)
+                              )
+                )
+
+```
+
+##2. Fit a new model that uses pf_expression_control to predict hf_score, or the total human freedom score.
+
+
+
+
+
+
+With a fitted linear model the following least squares regression line can be obtained:
+
+```{r, echo = FALSE}
+
+m_hf_pf <- lm(hf_score ~ pf_expression_control, data = hfi_2016)
+
+DT::datatable(tidy(m_hf_pf))
+
+``` 
+least squares regression m_hf_pf :
+$$
+  \hat{y} = 4.28 + 0.542 \times pf\_expression\_control
+$$
+  
+
+
+
+##3. Again add region to the model from Q4. Compare the slope and R2 with the model from Q4.
+
+
+Q4 asked for a model that uses  `ef_money` or monetary measure to predict `hf_score`
+
+```{r, echo = FALSE}
+
+m_hf_ef <- lm(hf_score ~ ef_money, data=hfi_2016)#model from q4
+
+m_hf_ef_region <- lm(hf_score ~ ef_money + region, data=hfi_2016)#model from q4 with added region
+
+
+```
+
+
+
+### {.tabset .tabset-fade .tabset-pills}
+
+When including region information more hf_data can be explained by the exposures (74.3% in contrast to 42,3%)
+
+The slope for the economy exposure with added region information has decreased.
+The regions East Asia,Western Europe,Eastern Europe, Middle East & North Africa,North America and Oceania have a significant impact on the hf score. The slope is shown in relation to the influence of the region "Caucasus & Central Asia".
+####hf_score ~ ef_money
+```{r, echo=FALSE}
+DT::datatable(tidy(m_hf_ef))
+DT::datatable(glance(m_hf_ef))
+```
+
+####hf_score ~ ef_money + region
+```{r, echo=FALSE}
+DT::datatable(tidy(m_hf_ef_region))
+DT::datatable(glance(m_hf_ef_region))
+```
+
+
+
+
+
+
+
+## 4. Finally fit a model with ef_money and pf_expression_control as exposures and hf_score as outcome. Compare the slope and R2
+
+
+
+```{r, echo = FALSE}
+m_hf_ef_pf<-lm(hf_score~ef_money+pf_expression_control, data=hfi_2016)
+
+
+glance(m_hf_ef_pf)#0.774-> 77.4% of hf data can be explained by the money+pf_expression_control model.
+
+
+tidy(m_hf_ef_pf) 
+
+
+```
+
+
+|  | hf_score~pf_expression_control | hf_score~ef_money | hf_score~ef_money+pf_expression_control |
+|------:|:------:|:------:|:------:|
+| Slope |`r tidy(m_hf_ef)[2,2]`| `r tidy(m_hf_pf)[2,2] `|`r tidy(m_hf_ef_pf)[2,2]`| 
+
+| $R^2$ | `r glance(m_hf_ef)[1,1] ` |`r glance(m_hf_pf)[1,1] ` | `r glance(m_hf_ef_pf)[1,1] ` |
+
+
+  
+  
+
+  
+  
+  
+  
+  
+least squares regression m2 :
+$$
+  \hat{y} = 5.05 + 0.368 \times pf\_expression\_control
+$$
+  
+
+
+    
+
+###from the models from Q1. Could ef_money be a confounder?
+ef_money has an effect on the hf_score and propably by definition a confounder must also have an association with the exposure(pf_expression_control) which seems likely. 
+
+
+##5. Use a linear regression model (and scatter plot) with ef_money as exposure and pf_expression_control as outcome, to study whether ef_money has an association with pf_expression_control as well. This might validate our finding that ef_money is a confounder between pf_expression_control as exposure and hf_score as outcome from Q6
+
+
+
+```{r, echo = FALSE}
+ggplot(data = hfi_2016, aes(x = ef_money, y = pf_expression_control)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+
+m_pf_ef<-lm(pf_expression_control~ef_money, data=hfi_2016)
+tidy(m_pf_ef)
+
+glance(m_pf_ef)
+
+
+tidy(m_pf_ef) 
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#The tasks based on exercises from Reka:
+
+ 1.   Create a workflowr project
+ 
+```{r, echo = TRUE, eval=FALSE }
+library("workflowr")
+workflowr::wflow_start("C:/Users/malte/Documents/R/Rclass_Assignment")
+```
+ 
+```{r, echo = FALSE, out.width = "10%"}
+knitr::include_graphics("CheckE.png", dpi = 100)
+```
+
+ 2.   Set it up so it works with github.
+```{r, echo = TRUE, eval=FALSE }
+wflow_use_github(username="MalteHermes", repository= "Rclass_Assignment", create_on_github=T)
+
+```
+
+```{r, echo = FALSE, out.width = "10%"}
+knitr::include_graphics("CheckE.png", dpi = 100)
+```
+
+  3.  Create a Markdown file in the analyis folder and solve the exercises from Rajbir.
+  
+  
+
+```{r, echo = FALSE, out.width = "10%"}
+knitr::include_graphics("CheckE.png", dpi = 100)
+```
+
+  4.  Add the following code to the end of the Rmd file and set eval=TRUE (see the code in the assignment.Rmd file):
+  
+```{r, echo = FALSE, out.width = "10%"}
+knitr::include_graphics("CheckE.png", dpi = 100)
+```
+
+
+  5.  Publish and push the file to github.
+
+  6.  Set up the github pages with the repository.
+
+  7.  As the result of the assignment, send us the link of your webpage.
+
+
+
+
+
+```{r, echo = FALSE, out.width = "70%", eval=FALSE}
+knitr::include_graphics("https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/code_hero.jpg?raw=true", dpi = 100)
+```
