@@ -1,7 +1,7 @@
-name: "Rclass_Assignment"
+name: Rclass_Assignment
 output_dir: ../docs
 navbar:
-  title: "Rclass_Assignment"
+  title: Rclass_Assignment
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/MalteHermes/Rclass_Assignment
 output:
   workflowr::wflow_html:
     toc: yes
