@@ -28,6 +28,66 @@ options(xtable.timestamp = "")
 
 
 
+
+#The tasks based on exercises from Reka:
+
+##1.   Create a workflowr project
+ 
+```{r, echo = TRUE, eval=FALSE }
+library("workflowr")
+workflowr::wflow_start("C:/Users/malte/Documents/R/Rclass_Assignment")
+```
+ 
+```{r, echo = FALSE, out.width = "10%"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/5/51/Green-checkmark.svg", dpi = 100)
+```
+
+## 2.   Set it up so it works with github.
+```{r, echo = TRUE, eval=FALSE }
+wflow_use_github(username="MalteHermes", repository= "Rclass_Assignment", create_on_github=T)
+
+```
+
+
+## 3.  Create a Markdown file in the analyis folder and solve the exercises from Rajbir.
+  
+  
+
+```{r, echo = FALSE, out.width = "10%"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/5/51/Green-checkmark.svg", dpi = 100)
+```
+
+## 4.  Add the following code to the end of the Rmd file and set eval=TRUE (see the code in the assignment.Rmd file):
+  
+```{r, echo = FALSE, out.width = "10%",eval=TRUE}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/5/51/Green-checkmark.svg", dpi = 100)
+```
+
+
+## 5.  Publish and push the file to github.
+  
+```{r, echo = TRUE, eval=FALSE }
+
+
+wflow_publish(files="./analysis")
+wflow_git_push()
+wflow_status()
+```
+  
+
+## 6.  Set up the github pages with the repository.
+
+https://maltehermes.github.io/Rclass_Assignment/
+
+
+## 7.  As the result of the assignment, send us the link of your webpage.
+
+
+```{r, echo = FALSE, out.width = "10%",eval=TRUE}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/5/51/Green-checkmark.svg", dpi = 100)
+```
+
+
 #Based on the exercises from Rajbir:
 
 ##1. Use the hfi dataset from the openintro package
@@ -181,67 +241,12 @@ tidy(m_pf_ef)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#The tasks based on exercises from Reka:
-
- 1.   Create a workflowr project
- 
-```{r, echo = TRUE, eval=FALSE }
-library("workflowr")
-workflowr::wflow_start("C:/Users/malte/Documents/R/Rclass_Assignment")
-```
- 
-```{r, echo = FALSE, out.width = "10%"}
-knitr::include_graphics("CheckE.png", dpi = 100)
-```
-
- 2.   Set it up so it works with github.
-```{r, echo = TRUE, eval=FALSE }
-wflow_use_github(username="MalteHermes", repository= "Rclass_Assignment", create_on_github=T)
-
-```
-
-```{r, echo = FALSE, out.width = "10%"}
-knitr::include_graphics("CheckE.png", dpi = 100)
-```
-
-  3.  Create a Markdown file in the analyis folder and solve the exercises from Rajbir.
-  
-  
-
-```{r, echo = FALSE, out.width = "10%"}
-knitr::include_graphics("CheckE.png", dpi = 100)
-```
-
-  4.  Add the following code to the end of the Rmd file and set eval=TRUE (see the code in the assignment.Rmd file):
-  
-```{r, echo = FALSE, out.width = "10%"}
-knitr::include_graphics("CheckE.png", dpi = 100)
-```
-
-
-  5.  Publish and push the file to github.
-
-  6.  Set up the github pages with the repository.
-
-  7.  As the result of the assignment, send us the link of your webpage.
-
-
-
-
-
 ```{r, echo = FALSE, out.width = "70%", eval=FALSE}
 knitr::include_graphics("https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/code_hero.jpg?raw=true", dpi = 100)
 ```
+
+
+
+Attribution:
+Green check image from:
+Hamidhaghparast, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
