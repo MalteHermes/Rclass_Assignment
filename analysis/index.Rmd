@@ -8,4 +8,4 @@ editor_options:
   chunk_output_type: console
 ---
 This is my R class Assignment Page 
-go to the Tasks [Here!]("./docs/AssignmentMH.html")
+go to the Tasks [Here!]("docs/AssignmentMH.html")
