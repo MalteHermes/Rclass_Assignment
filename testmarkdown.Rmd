@@ -1,0 +1,48 @@
+---
+title: "test"
+author: "Malte Hermes"
+date: "24 Februar 2021"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+
+library(tidyverse)
+library(openintro)
+library(broom)
+library(openintro)
+library(DT)
+library(xtable)
+#options(xtable.floating = FALSE)
+#options(xtable.timestamp = "")
+```
+
+```{r}
+
+hfi_2016 <-  hfi %>% filter(year == 2016) #Human Freedom Index of 2016
+
+hfi_2016 %>%
+  DT::datatable(extensions = 'Buttons',
+                options = list(dom = 'lfrtiBp',
+                               scrollX = TRUE,
+                              buttons = c( 'csv', 'pdf', 'print'),
+                              lengthMenu = c(5, 10, 15, 20)
+                              )
+                )
+
+```
+
+
+***
+
+| First Header | Second Header |         Third Header |  
+| :----------- | :-----------: | -------------------: |  
+| First row    |      Data     | Very long data entry |  
+| Second row   |    **Cell**   |               *Cell* |  
+[simple_table]
+
+
