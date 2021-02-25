@@ -9,40 +9,8 @@ editor_options:
 ---
 #This is my R class Page
 
+<Br><Br><Br>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-To View the Assignment go [Here!]("https://maltehermes.github.io/Rclass_Assignment/AssignmentMH")
- [Here!]("/AssignmentMH")
-  [Here!](./AssignmentMH")
-   [Here!]("AssignmentMH.html")
-   [Here!]("AssignmentMH")
-   
-   https://maltehermes.github.io/Rclass_Assignment/AssignmentMH
-   
-   https://maltehermes.github.io/Rclass_Assignment/AssignmentMH.html
-   
-   "https://maltehermes.github.io/Rclass_Assignment/AssignmentMH.html"
-   
-    "https://maltehermes.github.io/Rclass_Assignment/AssignmentMH"
-    
-   
-   <a href="https://maltehermes.github.io/Rclass_Assignment/AssignmentMH.html" title="AssignmentMH">Assignment</a>
-   
-   <a href="https://maltehermes.github.io/Rclass_Assignment/docs/AssignmentMH.html" title="AssignmentMH">Assignment</a>
+View the Assignment <a href="https://maltehermes.github.io/Rclass_Assignment/AssignmentMH.html" title="AssignmentMH">Here</a>
    
    
-   
-   
-   
-   
-=======
-To View the Assignment go [Here!]("AssignmentMH")
-
-<a href="https://MalteHermes.github.io/Rclass_Assignment/about.html" title="About Me">About Me</a>
->>>>>>> 842b763a9c448b4b0ebad5938276df17cfbf06d2
-=======
-To View the Assignment go [Here!]("AssignmentMH")
-
-<a href="https://MalteHermes.github.io/Rclass_Assignment/about.html" title="About Me">About Me</a>
->>>>>>> 842b763a9c448b4b0ebad5938276df17cfbf06d2
