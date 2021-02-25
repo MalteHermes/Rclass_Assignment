@@ -8,7 +8,7 @@ output:
           theme: united
   
 ---
-<div style="margin-bottom:100px;">
+
 <style>
 table.display td { white-space: nowrap; }
 </style>
@@ -74,7 +74,7 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/5/51/Gre
 <Br><Br>
 
 
-</div>
+
 ## 4.  Add the following code to the end of the Rmd file and set eval=TRUE (see the code in the assignment.Rmd file):
   
 ```{r, echo = FALSE, out.width = "5%",eval=TRUE}
