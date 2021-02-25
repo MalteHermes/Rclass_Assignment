@@ -10,6 +10,7 @@ editor_options:
 #This is my R class Page
 
 
+<<<<<<< HEAD
 To View the Assignment go [Here!]("https://maltehermes.github.io/Rclass_Assignment/AssignmentMH")
  [Here!]("/AssignmentMH")
   [Here!](./AssignmentMH")
@@ -34,3 +35,8 @@ To View the Assignment go [Here!]("https://maltehermes.github.io/Rclass_Assignme
    
    
    
+=======
+To View the Assignment go [Here!]("AssignmentMH")
+
+<a href="https://MalteHermes.github.io/Rclass_Assignment/about.html" title="About Me">About Me</a>
+>>>>>>> 842b763a9c448b4b0ebad5938276df17cfbf06d2
