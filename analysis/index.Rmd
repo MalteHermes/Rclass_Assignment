@@ -11,3 +11,26 @@ editor_options:
 
 
 To View the Assignment go [Here!]("https://maltehermes.github.io/Rclass_Assignment/AssignmentMH")
+ [Here!]("/AssignmentMH")
+  [Here!](./AssignmentMH")
+   [Here!]("AssignmentMH.html")
+   [Here!]("AssignmentMH")
+   
+   https://maltehermes.github.io/Rclass_Assignment/AssignmentMH
+   
+   https://maltehermes.github.io/Rclass_Assignment/AssignmentMH.html
+   
+   "https://maltehermes.github.io/Rclass_Assignment/AssignmentMH.html"
+   
+    "https://maltehermes.github.io/Rclass_Assignment/AssignmentMH"
+    
+   
+   <a href="https://maltehermes.github.io/Rclass_Assignment/AssignmentMH.html" title="AssignmentMH">Assignment</a>
+   
+   <a href="https://maltehermes.github.io/Rclass_Assignment/docs/AssignmentMH.html" title="AssignmentMH">Assignment</a>
+   
+   
+   
+   
+   
+   
