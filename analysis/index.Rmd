@@ -11,3 +11,5 @@ editor_options:
 
 
 To View the Assignment go [Here!]("AssignmentMH")
+
+<a href="https://MalteHermes.github.io/Rclass_Assignment/about.html" title="About Me">About Me</a>
