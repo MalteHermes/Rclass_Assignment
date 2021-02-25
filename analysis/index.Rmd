@@ -10,4 +10,4 @@ editor_options:
 #This is my R class Page
 
 
-To View the Assignment go [Here!]("docs/AssignmentMH.html")
+To View the Assignment go [Here!]("AssignmentMH")
